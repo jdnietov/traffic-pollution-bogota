@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  inrix-db:
+    container_name: inrix-db
+    image: mongo:4.0.9
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: nrix
+      MONGO_INITDB_ROOT_PASSWORD: nrix2019*
+    ports: 
+      - 27017:27017
+    volumes: 
+      - ./data:/data/db
